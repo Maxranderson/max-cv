@@ -146,7 +146,8 @@ const curriculum = {
     ]
 }
 
-ejs.renderFile('./index.ejs', curriculum, null, (err, str) => {
+ejs.renderFile('./app/cv-template.ejs', curriculum, null, (err, str) => {
     if(err) throw err;
-    fs.writeFileSync('./index.html', str);
+    fs.mkdirSync("./dist");
+    fs.writeFileSync('./dist/index.html', str);
 });
