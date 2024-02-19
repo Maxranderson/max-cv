@@ -1,0 +1,102 @@
+.curriculum {
+    font-family: 'Merriweather', serif;
+    display: grid;
+    column-gap: 40px;
+    margin: 20px auto;
+    max-width: 1018px;
+    grid: 
+        'title      contact-info'
+        'about-me   about-me'
+        'experience side-content';
+
+}
+.curriculum > .title {
+    grid-area: title;
+    font-size: 46px;
+    margin-top: 0;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    grid-area: contact-info;
+}
+.about-me {
+    font-family: 'Open Sans';
+    grid-area: about-me;
+}
+.experience {
+    grid-area: experience;
+}
+.side-content {
+    grid-area: side-content;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section > .title {
+    font-size: 16px;  
+    color: #2079c7; 
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.event > .title {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.event > .title > .company {
+    font-weight: bold;
+}
+
+.event > .title > .event-title {
+    font-style: italic;
+}
+
+.event > .event-period {
+    font-size: 13px;
+    color: #666666;
+}
+
+.event > .event-body {
+    color: #666666;
+}
+
+.tags-title {
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags > li {
+    list-style: none;
+    background-color: #efefef;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.job-responsibilities > li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .curriculum {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .curriculum {
+        display: block;
+        margin: 15px 10%;
+    }
+}

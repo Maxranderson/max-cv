@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Curriculum, Resume, Scala, Java, Software Engineer, Software Developer">
+    <meta name="author" content="Maxranderson Araújo">
+    <title>Maxranderson's CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="curriculum">
+    <h1 class="title"><%= name %></h1>
+    <address class="content-section contact-info">
+        João Pessoa, Paraíba, Brazil
+        <a href="mailto:max_rodrigues_araujo@hotmail.com">max_rodrigues_araujo@hotmail.com</a>
+        <a href="tel:+5583996599479">+55 83 99659-9479</a>
+        <a href="https://github.com/Maxranderson">github.com/Maxranderson</a>
+        <a href="https://linkedin.com/in/maxranderson">linkedin.com/in/maxranderson</a>
+    </address>
+    <section class="content-section about-me">
+        <% for (text of aboutMe) { %>
+            <p><%= text %></p>
+        <% }; %> 
+    </section>
+    <div class="side-content">
+
+        <section class="content-section">
+            <h2 class="title">Education</h2>
+            <% for (course of education) { %>
+                <section class="event">
+                    <h3 class="title">
+                        <span class="company"><%= course.institution %>,</span>
+                        <span><%= course.country %> —</span>
+                        <span class="event-title"><%= course.title %></span>
+                    </h3>
+                    <span class="event-period"><%= course.period %></span>
+                </section>
+            <% }; %> 
+        </section>
+        <section class="content-section">
+    
+            <h2 class="title">Main Tech</h2>
+            <ul class="tags">
+                <% for (tech of mainTech) { %>
+                    <li><%= tech %></li>
+                <% }; %> 
+            </ul>
+    
+        </section>
+        <section class="content-section">
+    
+            <h2 class="title">Languages</h2>
+            <ul class="tags">
+                <li>Portuguese</li>
+                <li>English</li>
+            </ul>
+    
+        </section>
+    </div>
+    <section class="experience content-section">
+        <h2 class="title">Experience</h2>
+
+        <% for (experience of experiencies) { %>
+        <section class="event">
+            <h3 class="title">
+                <span class="company"><%= experience.company %>,</span>
+                <span><%= experience.companyLocation %>—</span>
+                <span class="event-title"><%= experience.title %> </span>
+                
+            </h3>
+
+            <span class="event-period"><%= experience.period %> </span>
+            <div class="event-body">
+                <ul class="job-responsibilities">
+                    <% for (responsibility of experience.responsibilities) { %>
+                    <li><%= responsibility %> </li>
+                    <% }; %> 
+                </ul>
+                
+                <span class="tags-title">Techs used:</span>
+                <ul class="tags">
+                <% for (tech of experience.techsUsed) { %>
+                    <li><%= tech %> </li>
+                <% }; %> 
+                </ul>
+            </div>
+        </section>
+        <% }; %>
+
+    </section>
+    
+</body>
+</html>
