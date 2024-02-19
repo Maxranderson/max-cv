@@ -146,8 +146,13 @@ const curriculum = {
     ]
 }
 
+const distPath = './dist';
+
 ejs.renderFile('./app/cv-template.ejs', curriculum, null, (err, str) => {
     if(err) throw err;
-    fs.mkdirSync("./dist");
-    fs.writeFileSync('./dist/index.html', str);
+
+    if(!fs.existsSync(distPath)) fs.mkdirSync(distPath);
+    
+    fs.copyFileSync('./app/styles/style.css', `${distPath}/style.css`);
+    fs.writeFileSync(`${distPath}/index.html`, str);
 });
