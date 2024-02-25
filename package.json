@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app/cv-generator.js --ext ejs,js,css --ignore './dist/*'"
+    "start": "nodemon app/cv-generator.js --ext ejs,js,css --ignore './dist/*'",
+    "infra:plan": "terraform -chdir=infra plan",
+    "infra:apply": "terraform -chdir=infra apply",
+    "infra:destroy": "terraform -chdir=infra destroy"
   },
   "author": "",
   "license": "ISC",
