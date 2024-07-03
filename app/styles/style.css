@@ -10,21 +10,30 @@
         'experience side-content';
 
 }
+
 .curriculum > .title {
     grid-area: title;
     font-size: 46px;
     margin-top: 0;
+    font-weight: bold;
 }
+
 .contact-info {
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans';
     grid-area: contact-info;
+    font-style: normal;
+    a {
+        font-weight: bold;
+        text-decoration: none;
+    }
 }
 .about-me {
     font-family: 'Open Sans';
     grid-area: about-me;
 }
+
 .experience {
     grid-area: experience;
 }

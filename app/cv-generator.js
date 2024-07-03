@@ -44,6 +44,8 @@ const pbSoft = {
         'Slick',
         'SQL Server',
         'Postgres',
+        'Javascript',
+        'Typescript',
         'AngularJS',
         'Angular',
         'RabbitMQ',

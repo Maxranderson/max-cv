@@ -1,0 +1,1 @@
+scp ec2-user@valheim.maxranderson.com:~/valheim-server/config/worlds_local/* ~/valheim-server-bkp/
